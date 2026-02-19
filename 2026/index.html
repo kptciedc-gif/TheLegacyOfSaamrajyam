@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>2025 — The Strength 🌸 Samrajyam</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+<!-- Floating Doodles for 2025 -->
+<div class="doodle d1">🌸</div>
+<div class="doodle d2">💪</div>
+<div class="doodle d3">🏆</div>
+<div class="doodle d4">⭐</div>
+<div class="doodle d5">💫</div>
+<div class="doodle d6">✨</div>
+<div class="doodle d7">🔥</div>
+<div class="doodle d8">⚡</div>
+<div class="doodle d9">💻</div>
+<div class="doodle d10">🎯</div>
+
+<!-- Memory Ribbon -->
+<div class="memory-ribbon">🌸 Chapter 3: The Strength 🌸</div>
+
+<!-- Floating Hearts -->
+<div class="hearts-container" id="heartsContainer"></div>
+
+<div class="container">
+
+  <h1>🌸 2025 — The Strength 🌸</h1>
+
+  <p class="description">
+    The year of milestones. Projects got tougher, but so did we. 
+    We pulled all-nighters together, celebrated every small victory, 
+    and held each other up through failures. This was the year we realized 
+    we weren't just classmates — we were family. Unbreakable. Unstoppable.
+    <br><br>
+    <span>“Stronger together, forever and always.”</span>
+  </p>
+
+  <!-- 2025 VIDEO SECTION -->
+  <div class="video-section">
+    <div class="video-year-tag">🌸 2025 Memories</div>
+    <div class="video-wrapper">
+      <!-- REPLACE WITH YOUR 2025 YOUTUBE VIDEO ID -->
+      <iframe src="https://www.youtube.com/embed/YOUR_2025_VIDEO_ID?autoplay=0&mute=0&controls=1&showinfo=0&rel=0&modestbranding=1" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video-caption">🎥 The year we became unstoppable...</div>
+  </div>
+
+  <!-- 3 PHOTOS GALLERY FOR 2025 -->
+  <div class="gallery-title">📸 Milestones & Memories</div>
+  <div class="gallery">
+    <div class="card">
+      <div class="photo-counter">1</div>
+      <img src="../photos/2025-1.jpg" alt="Project success" onerror="this.src='https://via.placeholder.com/300x250?text=Project+Day+🌸'">
+      <p>We built more than code 🎉</p>
+    </div>
+    <div class="card">
+      <div class="photo-counter">2</div>
+      <img src="../photos/2025-2.jpg" alt="Celebration" onerror="this.src='https://via.placeholder.com/300x250?text=Celebration+🌸'">
+      <p>Every win, we celebrated together</p>
+    </div>
+    <div class="card">
+      <div class="photo-counter">3</div>
+      <img src="../photos/2025-3.jpg" alt="Team spirit" onerror="this.src='https://via.placeholder.com/300x250?text=Team+Spirit+🌸'">
+      <p>Strength in unity</p>
+    </div>
+  </div>
+
+  <!-- Back Button -->
+  <a class="back" href="../">← Back to our strength</a>
+
+  <!-- Polaroid Stickers -->
+  <div class="polaroid-stickers">
+    <div class="sticker" style="--rot: -5deg;">🌸</div>
+    <div class="sticker" style="--rot: 8deg;">🏆</div>
+    <div class="sticker" style="--rot: -10deg;">💪</div>
+  </div>
+
+  <footer>
+    🌸 2025 — Unbreakable bonds, unforgettable moments 🌸
+    <span>Together we rose, together we conquered</span>
+  </footer>
+
+</div>
+
+<!-- Hearts Script -->
+<script>
+function createHeart() {
+  const heartsContainer = document.getElementById('heartsContainer');
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  const hearts = ['❤️', '💖', '💗', '🌸', '🏆', '✨'];
+  heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+  heart.style.left = Math.random() * 100 + '%';
+  heart.style.fontSize = (Math.random() * 2 + 1) + 'em';
+  heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+  heartsContainer.appendChild(heart);
+  setTimeout(() => heart.remove(), 10000);
+}
+setInterval(createHeart, 500);
+</script>
+
+</body>
+</html>
