@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>The Legacy of Samrajyam — Forever in Our Hearts 💖</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@300;400;500;600;700&family=Comfortaa:wght@300;400;700&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- 15 Floating Doodles -->
+<div class="doodle d1">🌱</div>
+<div class="doodle d2">💕</div>
+<div class="doodle d3">✨</div>
+<div class="doodle d4">📸</div>
+<div class="doodle d5">🎓</div>
+<div class="doodle d6">☕</div>
+<div class="doodle d7">🌼</div>
+<div class="doodle d8">🌸</div>
+<div class="doodle d9">👑</div>
+<div class="doodle d10">💻</div>
+<div class="doodle d11">🎧</div>
+<div class="doodle d12">🌈</div>
+<div class="doodle d13">⭐</div>
+<div class="doodle d14">🕯️</div>
+<div class="doodle d15">💗</div>
+
+<!-- Memory Ribbon -->
+<div class="memory-ribbon">✨ Class of 2026 ✨</div>
+
+<!-- Floating Hearts Container -->
+<div class="hearts-container" id="heartsContainer"></div>
+
+<div class="container">
+
+  <h1>The Legacy of Samrajyam</h1>
+
+  <p class="description">
+    We didn't just learn to code — we learned to live, to love, to laugh until we cried, 
+    and to hold onto moments that time can never erase. These four years weren't just 
+    about becoming engineers; they were about becoming family.
+    <br><br>
+    <span>Every line of code we wrote had a piece of our heart.</span>
+    <br><br>
+    A digital time capsule crafted by final-year Computer Engineering students,
+    preserving our journey from 2023 to 2026 — the all-nighters, the celebrations,
+    the tears, the triumphs, and the friendships that will last forever.
+  </p>
+
+  <p class="motto">“We built more than projects. We built a home.”</p>
+
+  <!-- MAIN TRAILER VIDEO -->
+  <div class="video-section">
+    <div class="video-year-tag">🎬 Our Journey in 4 Years</div>
+    <div class="video-wrapper">
+      <!-- REPLACE THIS VIDEO ID WITH YOUR YOUTUBE VIDEO ID -->
+      <iframe src="https://www.youtube.com/embed/YOUR_MAIN_VIDEO_ID?autoplay=0&mute=0&controls=1&showinfo=0&rel=0&modestbranding=1" 
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+              allowfullscreen>
+      </iframe>
+    </div>
+    <div class="video-caption">✨ 4 Years, 1 Family, Infinite Memories ✨</div>
+  </div>
+
+  <!-- MEMORY PHOTO STRIP - 3 PHOTOS ON MAIN PAGE -->
+  <div class="gallery-title">📸 Glimpses of Forever</div>
+  <div class="photo-strip">
+    <img src="photos/main1.jpg" alt="Memory 1" onerror="this.src='https://via.placeholder.com/80?text=📸'">
+    <img src="photos/main2.jpg" alt="Memory 2" onerror="this.src='https://via.placeholder.com/80?text=📸'">
+    <img src="photos/main3.jpg" alt="Memory 3" onerror="this.src='https://via.placeholder.com/80?text=📸'">
+    <img src="photos/main4.jpg" alt="Memory 4" onerror="this.src='https://via.placeholder.com/80?text=📸'">
+    <img src="photos/main5.jpg" alt="Memory 5" onerror="this.src='https://via.placeholder.com/80?text=📸'">
+  </div>
+
+  <div class="year-buttons">
+    <a href="2023/" data-icon="🌱">🌱 2023 — Where We Began</a>
+    <a href="2024/" data-icon="🌼">🌼 2024 — Where We Grew</a>
+    <a href="2025/" data-icon="🌸">🌸 2025 — Where We Shone</a>
+    <a href="2026/" data-icon="👑">👑 2026 — Where We'll Live Forever</a>
+  </div>
+
+  <!-- Polaroid Stickers -->
+  <div class="polaroid-stickers">
+    <div class="sticker" style="--rot: -8deg;">📷</div>
+    <div class="sticker" style="--rot: 5deg;">❤️</div>
+    <div class="sticker" style="--rot: -3deg;">🎓</div>
+    <div class="sticker" style="--rot: 10deg;">✨</div>
+  </div>
+
+  <footer>
+    Made with infinite love by Team Samrajyam 💖
+    <span>Every moment, every memory, every heartbeat — forever yours</span>
+    <span style="font-size: 0.8em; margin-top: 15px;">2023 — 2026 • Written in the stars • Etched in our hearts</span>
+  </footer>
+
+</div>
+
+<!-- Floating Hearts Script -->
+<script>
+function createHeart() {
+  const heartsContainer = document.getElementById('heartsContainer');
+  const heart = document.createElement('div');
+  heart.className = 'heart';
+  
+  const hearts = ['❤️', '💖', '💗', '💓', '💕', '💞', '💝', '💘', '💟'];
+  heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+  
+  heart.style.left = Math.random() * 100 + '%';
+  heart.style.fontSize = (Math.random() * 2 + 1) + 'em';
+  heart.style.animationDuration = (Math.random() * 5 + 5) + 's';
+  heart.style.opacity = Math.random() * 0.5 + 0.3;
+  
+  heartsContainer.appendChild(heart);
+  
+  setTimeout(() => {
+    heart.remove();
+  }, 10000);
+}
+
+setInterval(createHeart, 500);
+
+document.addEventListener('touchstart', function(e) {
+  for(let i = 0; i < 3; i++) {
+    setTimeout(createHeart, i * 100);
+  }
+});
+</script>
+
+</body>
+</html>
